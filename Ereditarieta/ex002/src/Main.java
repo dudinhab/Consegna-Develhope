@@ -8,10 +8,8 @@ public class Main {
         double altezza = 2;
         double base = 3.5;
 
-        Forma forma = new Forma();
-        Rettangolo rettangolo = new Rettangolo();
+        Rettangolo rettangolo = new Rettangolo(altezza,base);
 
-        System.out.println("Forma: "+forma.calculaArea(altezza, base));
-        System.out.println("Rettangolo: "+rettangolo.calculaArea(altezza, base));
+        System.out.println("Rettangolo: "+rettangolo.calcolaArea());
     }
 }
