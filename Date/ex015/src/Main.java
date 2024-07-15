@@ -16,6 +16,7 @@ public class Main {
         String dateStringMedium = offsetDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
         String dateStringFull = offsetDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
 
+
         System.out.println("Format Short:");
         System.out.println(dateStringShort);
         System.out.println("Format Medium:");
