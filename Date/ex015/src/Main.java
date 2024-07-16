@@ -11,10 +11,11 @@ import java.time.ZonedDateTime;
 
 public class Main {
     public static void main(String[] args) {
-        ZonedDateTime offsetDateTime = OffsetDateTime.parse("2002-03-01T13:00:00Z").toZonedDateTime();
+        OffsetDateTime offsetDateTime = OffsetDateTime.parse("2002-03-01T13:00:00Z");
         String dateStringShort = offsetDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT));
         String dateStringMedium = offsetDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
-        String dateStringFull = offsetDateTime.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.FULL));
+        String dateStringFull = offsetDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+
 
         System.out.println("Format Short:");
         System.out.println(dateStringShort);
