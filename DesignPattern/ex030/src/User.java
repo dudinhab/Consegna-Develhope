@@ -2,14 +2,16 @@ public class User {
     private String nome;
     private int eta;
 
-    public User(){
+    private static User user;
 
+    public static User getUser() {
+        if (user == null) {
+            user = new User();
+        }
+        return user;
     }
 
-    public User(String nome, int eta) {
-        this.nome = nome;
-        this.eta = eta;
-    }
+    private User(){};
 
     public String getNome() {
         return nome;

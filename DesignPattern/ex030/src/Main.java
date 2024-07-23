@@ -5,21 +5,18 @@ Creare 2 oggetti User di cui creerà un'istanza.
 Del primo si stamperanno le informazioni di default, del secondo si cambieranno le informazioni e poi si stamperanno a video
  */
 public class Main {
-    private static User user;
-
-    public static User getUser() {
-        if (user == null) {
-            user = new User("Duda", 23);
-        }
-        return user;
-    }
 
     public static void main(String[] args) {
-        User localUser1 = getUser();
-        System.out.println(localUser1);
+        User localUser1 = User.getUser();
+        User localUser2 = User.getUser();
+        System.out.println("Prima di modificare:");
+        System.out.println("localUser1: "+localUser1);
+        System.out.println("localUser2: "+localUser2);
 
-        User localUser2 = getUser();
+        System.out.println("Dopo di modificare localUser2:");
         localUser2.setNome("Samuel");
-        System.out.println(localUser2);
+        System.out.println("localUser1: "+localUser1);
+        System.out.println("localUser2: "+localUser2);
+
     }
 }
